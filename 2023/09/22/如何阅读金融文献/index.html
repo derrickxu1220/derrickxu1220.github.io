@@ -506,5 +506,17 @@
 
 
 
-</body>
+<!-- hexo injector body_end start -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  document.querySelectorAll('code.language-mermaid').forEach(function(el) {
+    const container = document.createElement('div');
+    container.className = 'mermaid';
+    container.textContent = el.textContent;
+    el.parentNode.replaceWith(container);
+  });
+  await mermaid.run();
+</script>
+<!-- hexo injector body_end end --></body>
 </html>
