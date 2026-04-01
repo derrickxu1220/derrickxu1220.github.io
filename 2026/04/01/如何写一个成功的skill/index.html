@@ -9,7 +9,7 @@
     
     <title>
         
-            归档: 2023 |
+            如何写一个成功的 Skill |
         
         Derrick Xu
     </title>
@@ -76,7 +76,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 归档
@@ -142,7 +142,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">归档</a>
                 </li>
             
@@ -182,48 +182,162 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">如何写一个成功的 Skill</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/pizza.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Tianyang Xu</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
         
-<div class="archive-list-container">
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2026-04-01 12:00:00</span>
+        <span class="mobile">2026-04-01 12:00</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2026</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2026-04-01 20:14:59</span>
+    </span>
+    
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2026/04/01/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%B8%AA%E6%88%90%E5%8A%9F%E7%9A%84skill/"
-                        >如何写一个成功的 Skill</a>
-                        <span class="article-date">04-01</span>
+                    <li>
+                        <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/AI/">AI</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/09/22/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E9%87%91%E8%9E%8D%E6%96%87%E7%8C%AE/"
-                        >如何阅读经济或金融文献</a>
-                        <span class="article-date">09-22</span>
-                    </li>
-                
-            </ul>
-        </section>
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>我在做一件具体的事：把数据分析团队的工作流接入 AI。</p>
+<p>这件事的起点是老板提的一个问题——技术团队已经在大量用 agent 辅助开发（也就是现在说的 vibe coding），但数据分析这类高度依赖业务理解和内部上下文的工作，为什么 AI 帮不上忙？我没有立刻回答，但我知道这个问题值得认真对待。</p>
+<p>最初的想法是把分析流程拆成步骤，每一步都写清楚，让 AI 按照这个路径走。我花了几天写了一份很完整的 skill，覆盖了数据清洗、指标定义、异常检测、结论撰写。跑起来之后发现，AI 反而比没有 skill 的时候表现更差——它被各种约束卡住，走得磕磕绊绊，还不如直接让它自己跑。</p>
+<p>把 skill 删掉，放开约束，让它自由发挥。这次跑通了，但结论跑偏了，因为它不知道内部的指标口径，不知道哪些异常是正常的季节性波动，不知道我们的受众想看什么。</p>
+<p>这就是写 skill 最核心的两难：管得太紧，AI 的能力发挥不出来；放得太开，业务上下文这个洞补不上。这也是 Demo 级和工业级 skill 的本质区别——demo 在 happy path 上永远好看，工业级要的是在各种边界情况下都能稳定走对。</p>
+<hr />
+<p>破局的方法，是先把两条路都走到尽头，然后从失败里找答案。</p>
+<p>第一版什么都不加，就让 AI 跑，专门看它在哪里翻车。它在哪里给出了错误的指标定义，在哪里对季节性波动做出了错误的判断，在哪里写出了受众根本不关心的内容。这些失败的点，才是 skill 真正应该覆盖的地方——然后只写这几个点，其他的一概不碰。</p>
+<p>这是一个最少提示词原则。AI 缺的不是流程，是上下文。它对通用流程的掌握比任何文档都好，它缺的是你们公司特有的指标口径、你们行业特有的业务逻辑、你们团队特有的输出标准。这些东西在任何训练数据里都不存在，只能你来补。</p>
+<p>这件事还有一个技术层面的原因：模型能可靠执行的指令量是有上限的，大约在 150 到 200 条之间，超过之后不是&quot;忽略不重要的&quot;，而是所有指令都开始均匀漂移。最初那份几百行的 skill，很多指令其实是在用堆砌来掩盖我自己对业务的不确定——结果是把这份不确定性传递给了 AI，让它更难跑稳。</p>
+<hr />
+<p>跑通之后，真正的难题才开始：怎么让它在生产环境里稳定。</p>
+<p>我现在同时开三个 session。第一个写 skill。第二个测试，不参与设计，只负责把它用坏——用各种奇怪的输入、各种边界情况，尽量复现生产里会发生的问题。第三个做批评，把测试过程的 log 喂给它，让它找浪费的步骤、模糊的指令、走偏的逻辑，然后这些反馈回到第一个 session 里修。</p>
+<p>有一个细节改变了整个循环的质量：批评者要模拟的不只是人类用户，还要模拟将来会调用这个 skill 的 Agent 本身。数据分析流程里很多环节是 Agent 之间互相调用，如果 skill 的输出格式不稳定，下游 Agent 会跑偏。只有把这层也放进测试，循环才是完整的。</p>
+<hr />
+<p>经过十几轮迭代之后，这个 skill 从最初的几百行缩到三十几行，没有一句废话，每一句话都在补 AI 自己不可能知道的业务信息。</p>
+<p>这让我想到一个比喻：你没法用精度差的机床，加工出精度更高的机床。能把 skill 写到这种程度，前提是你对业务的理解足够深，知道 AI 真正的盲点在哪里。最初那份几百行的 skill，本质上是在用大量指令填满不确定性——结果是把不确定性传递给了 AI。</p>
+<p>一个能在生产里稳定跑的 skill，需要三个东西。第一，足够小——只覆盖 AI 真正不知道的部分，其余全部放开。第二，触发精准——description 写得好不好，直接决定 skill 在对的时机能不能出现，同样的 skill 优化前后激活率能差出一倍以上。第三，自愈能力——当某个环节出问题，skill 能引导 AI 自己修复，而不是整个流程崩掉。没有这一层，生产事故很难避免：Google 有 agent 意外清空整个云盘，Replit 有 AI 删掉生产数据库还试图在日志里隐瞒——大多数生产级事故，根子都在缺乏这层保护。</p>
+<hr />
+<p>往后看，这条线很清楚。从最早写 prompt，到 n8n 这类 workflow 工具，到 AI harness，再到今天写 skill——模型越来越强，我们需要给它的东西越来越少，但要越来越准。</p>
+<p>它现在已经是全知全能的了，但仍然是第一天来公司上班的实习生——所有通用知识都有，唯独不知道你这家公司、这个团队、这条业务线的具体情况。Skill 就是这份入职材料，写好了它能立刻进入状态，写差了再强的模型也帮不上你的忙。</p>
+<p>真正的难点从来不在模型，在你自己对业务理解的深度，以及能不能把这个理解精准地翻译成 AI 可以接收的语言。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/">#方法论</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/AI/">#AI</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">#数据科学</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/09/22/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E9%87%91%E8%9E%8D%E6%96%87%E7%8C%AE/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">如何阅读经济或金融文献</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        
     </div>
 </div>
+
+            </div>
+        
+    </div>
+</div>
+
 
                 
             </div>
@@ -264,6 +378,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -363,9 +494,29 @@
 
 <div class="post-scripts">
     
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
 </div>
 
 
 
-</body>
+<!-- hexo injector body_end start -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  document.querySelectorAll('code.language-mermaid').forEach(function(el) {
+    const container = document.createElement('div');
+    container.className = 'mermaid';
+    container.textContent = el.textContent;
+    el.parentNode.replaceWith(container);
+  });
+  await mermaid.run();
+</script>
+<!-- hexo injector body_end end --></body>
 </html>
